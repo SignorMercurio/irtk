@@ -1,0 +1,51 @@
+mode: remote # Run mode: local/remote
+
+ssh_info: # SSH related config
+  host: x.x.x.x # SSH host
+  port: 22 # SSH port
+  username: root # SSH username
+  password: "xxx" # SSH password
+  pkey: "/path/to/id_rsa" # SSH private key file
+
+file_transfer: # File transfer config
+  upload_dir: /tmp/irtk_upload # remote upload directory
+  download_dir: ./downloads # local download directory
+
+recon: # switches for information gathering module
+  users: true
+  ssh: true
+  process: true
+  network: true
+  cron: true
+  log: true
+  files: true
+  env: true
+  service: true
+  rootkit: true
+
+process: # process information gathering config
+  cpu_top: 20 # check top x high-CPU process
+  mem_top: 20 # check top x high-mem process
+
+log: # log collection config
+  custom_log_path: /var/log/yum.log # customized log to collect
+
+files: # file information gathering config
+  verbose: false # whether or not to perform some time-consuming operations
+  mtime: 1 # find modified files in last x days
+  ctime: 1 # find changed files in last x days
+  large_files_threshold: 200M # threshold for large files
+
+ti: # threat intelligence config
+  ak: xxx # API Key for VirusTotal
+
+mkdocs: # MkDocs config
+  enabled: false # whether or not to output to MkDocs(does not work in local mode)
+  endpoint: http://x.x.x.x:8000 # MkDocs endpoint
+  path: /root/mkdocs/docs # local MkDocs documentation directory(on the endpoint server)
+
+oss: # OSS config
+  endpoint: https://oss-cn-hongkong.aliyuncs.com # OSS endpoint
+  bucket: ir-transfer-station # OSS bucket
+  ak: xxx # OSS AccessKeyId
+  sk: xxx # OSS AccessKey Secret
