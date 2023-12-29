@@ -47,5 +47,6 @@ mkdocs: # MkDocs config
 oss: # OSS config
   endpoint: https://oss-cn-hongkong.aliyuncs.com # OSS endpoint
   bucket: ir-transfer-station # OSS bucket
+  tools_dir: Tools # OSS path storing useful tools
   ak: xxx # OSS AccessKeyId
   sk: xxx # OSS AccessKey Secret
